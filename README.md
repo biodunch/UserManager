@@ -8,6 +8,29 @@ The API is used to manage users in a MongoDB database.
 ### Development
 This application was developed using [ExpressJS](http://expressjs.com/). MongoDB was used for persisting data with [Mongoose](https://mongoosejs.com/) as [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping).
 
+### Setting Up with Docker
+## Development Environment
+
+### Docker
+This project uses docker, be sure you have docker installed, otherwise, head to docker [website](https://docs.docker.com/engine/installation/) to get the version compatible with your Operating System.
+
+#### Starting Containers
+The project contains bash script to start all containers, simplify the interaction with docker and enable dynamic code changes. This can be found in
+```
+<project_root>/bin
+```
+
+Before running the script, create a copy of `.env.sample` in the root folder and name it `.env`.
+To start up docker containers, which will include everything specified in the docker compose file and Dockerfiles, run the following command in the project root:
+
+```
+./bin/start_disposable.sh
+```
+After this, all your containers should be running. 
+You can access the web app on:
+`localhost:3000` from your browser
+---
+
 ### Installation
 * Start up your terminal (or Command Prompt on Windows OS).
 * Ensure that you've `node` installed on your PC.
